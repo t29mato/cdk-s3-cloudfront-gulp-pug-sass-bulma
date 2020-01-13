@@ -11,9 +11,8 @@ const paths = {
 // SCSS
 function css (cb) {
   gulp.src([paths.src + "/scss/main.scss", "node_modules/bulma/bulma.sass"])
-    .pipe(sass())
-    .pipe(gulp.dest(paths.dest + "/css"));
-  console.log('css');
+  .pipe(sass())
+  .pipe(gulp.dest(paths.dest + "/css"));
   cb();
 }
 
@@ -31,4 +30,10 @@ function clean (cb) {
   cb();
 }
 
-exports.default = gulp.series(clean, gulp.parallel(css, html));
+exports.default = function () {
+  gulp.watch(
+    paths.src + '/scss/style.scss',
+    { ignoreInitial: false },
+    gulp.series(clean, gulp.parallel(css, html))
+    );
+  }
