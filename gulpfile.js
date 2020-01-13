@@ -18,7 +18,7 @@ function css (cb) {
 
 // Pug
 function html (cb) {
-  gulp.src(paths.src + '/pug/*')
+  gulp.src(paths.src + '/*.pug')
   .pipe(pug({pretty: true}))
   .pipe(gulp.dest(paths.dest + "/"))
   cb();
@@ -32,8 +32,8 @@ function clean (cb) {
 
 exports.default = function () {
   gulp.watch(
-    paths.src + '/scss/style.scss',
+    paths.src + '/*.pug',
     { ignoreInitial: false },
-    gulp.series(clean, gulp.parallel(css, html))
+    gulp.parallel(css, html)
     );
   }
