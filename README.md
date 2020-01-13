@@ -3,8 +3,13 @@
 - AWS CDKを利用して静的サイトをS3+CloudFront構成でホスティングの勉強用
 - フロントはタスクランナーGulpを使ってPugとSassをCSSに変換
 
+# 環境情報
 
-# Deploy
+- macOS 10.15
+- node 12.12.0
+- npm 6.11.3
+
+# デプロイ
 
 ```
 $ npm install -g aws-cdk
