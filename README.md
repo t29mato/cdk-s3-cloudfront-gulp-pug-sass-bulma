@@ -29,3 +29,7 @@ $ cdk deploy -c domain=domain.com -c subdomain=www
 - typescript 3.7.2 (CDK構成用)
 - Pug
 - SCSS
+
+# 参考
+
+- [ベースのCDKテンプレート](https://github.com/aws-samples/aws-cdk-examples/tree/master/typescript/static-site/)
