@@ -26,9 +26,11 @@ function html (cb) {
 
 // Clean
 function clean (cb) {
-  del(paths.dest + '/*');
+  del(paths.dest + '/**');
   cb();
 }
+
+exports.build = gulp.series(clean, gulp.parallel(css, html));
 
 exports.default = function () {
   gulp.watch(

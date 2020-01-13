@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node_modules/gulp/bin/gulp.js build",
     "watch": "tsc -w",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "gulp-watch": "node_modules/gulp/bin/gulp.js"
   },
   "devDependencies": {
     "@types/node": "^10.17.0",
