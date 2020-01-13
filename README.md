@@ -11,6 +11,13 @@
 
 # デプロイ
 
+## 準備
+
+1. AWSアカウントの準備
+2. [AWS CDKの設定](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+
+など
+
 ```
 $ npm install -g aws-cdk
 $ npm install
