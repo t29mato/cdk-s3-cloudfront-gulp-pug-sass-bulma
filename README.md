@@ -1,3 +1,9 @@
+# 目的
+
+- AWS CDKを利用して静的サイトをS3+CloudFront構成でホスティングの勉強用
+- フロントはタスクランナーGulpを使ってPugとSassをCSSに変換
+
+
 # Deploy
 
 ```
